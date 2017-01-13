@@ -1,0 +1,74 @@
+%\VignetteIndexEntry{MyFirstPackage: Vignette} \\
+%\VignetteDepends{MyFirstPackage}
+%\VignettePackage{MyFirstPackage}
+%\VignetteEngine{knitr::knitr}
+\documentclass[a4paper]{article}
+\usepackage{etex}
+%\usepackage{Sweave}
+\usepackage[margin=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{color}
+\usepackage{easybmat}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{float}
+\usepackage[english]{babel}
+\usepackage{natbib}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks, 
+	citecolor=black,
+	filecolor=black,
+	linkcolor=black,
+	urlcolor=black
+}
+
+\usepackage{subcaption}
+
+\title{MyFirstPackage 1.0.0 - Vignette}
+\date{}
+\author{Ewoud De Troyer}
+
+\begin{document}
+\maketitle
+
+\section{Examples}
+
+Load the package.
+
+<<load,echo=TRUE,eval=TRUE>>=
+library(MyFirstPackage)
+@
+
+
+\noindent Some Examples
+
+<<example1,echo=TRUE,fig.width=14>>=
+plotDownloads("biclust",from="2014-01-01",to="2016-11-30")
+@
+<<example2,echo=TRUE,fig.width=14>>=
+plotDownloads("biclust",from="2016-04-01",to="2016-11-30",by="day")
+@
+<<example3,echo=TRUE,fig.width=14>>=
+plotDownloads("ORCME",from="2014-01-01",to="2016-11-30")
+@
+<<example4,echo=TRUE,fig.width=14>>=
+plotDownloads("ORCME",from="2016-04-01",to="2016-11-30",by="day")
+@
+<<example5,echo=TRUE,fig.width=14>>=
+plotDownloads("RcmdrPlugin.BiclustGUI",from="2016-01-01",to="2016-11-30")
+@
+<<example6,echo=TRUE,fig.width=14>>=
+plotDownloads("RcmdrPlugin.BiclustGUI",from="2016-04-01",to="2016-11-30",by="day")
+@
+<<example7,echo=TRUE,fig.width=14>>=
+plotDownloads("ggplot2",from="2014-01-01",to="2016-11-30")
+@
+<<example8,echo=TRUE,fig.width=14>>=
+plotDownloads("ggplot2",from="2016-04-01",to="2016-11-30",by="day")
+@
+
+\end{document}

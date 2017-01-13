@@ -1,0 +1,16 @@
+Package: RDownloads
+Type: Package
+Title: Plotting R Studio CRAN Mirror Download Numbers
+Version: 1.0.0
+Date: 2016-12-13
+Author: Ewoud De Troyer
+Maintainer: Ewoud De Troyer <ewoud.detroyer@uhasselt.be>
+Description: Plots download numbers from R Studio CRAN Mirror with ggplot2.
+License: GPL-3
+Depends:
+    ggplot2(>= 2.2.0)
+Imports:
+    cranlogs
+Suggests: knitr
+VignetteBuilder: knitr
+RoxygenNote: 5.0.1
